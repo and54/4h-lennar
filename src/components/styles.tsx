@@ -14,6 +14,7 @@ export const HeaderStyled = styled('div')(({ theme }) => ({
   marginTop: 24,
   position: 'fixed',
   alignItems: 'center',
+  zIndex: 1000,
   '.logo': {
     marginLeft: 24,
     display: 'flex',
@@ -59,7 +60,37 @@ export const LandingStyled = styled('div')(({ theme }) => ({
   height: '100vh',
   backgroundImage: `url("./bg-img.svg")`,
   backgroundRepeat: 'no-repeat',
-  backgroundSize: 'contain'
+  backgroundPositionX: 'right',
+  backgroundPositionY: 100,
+  position: 'relative',
+  '.main-content': {
+    width: '60%',
+    padding: '190px 24px 0 24px',
+  },
+  '.title': {
+    fontSize: 48,
+    fontWeight: 800,
+    color: theme.palette.common.white,
+  },
+  '.purple': {
+    color: theme.palette.primary.main,
+  },
+  [theme.breakpoints.down('lg')]: {
+    backgroundPositionX: 430,
+  },
+  [theme.breakpoints.down('md')]: {
+    '.main-content': {
+      width: '100%',
+    }
+  },
+  [theme.breakpoints.down('sm')]: {
+    backgroundPositionX: 'center',
+    backgroundPositionY: 'calc(100vh - 250px)',
+    backgroundSize: 'calc(100vw - 20px)',
+    '.main-content': {
+      padding: '100px 16px 0 16px',
+    },
+  }
 }));
 
 export const StyledMenu = styled('div')<IStyledMenu>(({ theme, open }) => ({
