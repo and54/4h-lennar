@@ -68,7 +68,7 @@ export const LandingStyled = styled('div')(({ theme }) => ({
     padding: '190px 24px 0 24px',
   },
   '.title': {
-    fontSize: 48,
+    fontSize: 'min(48px, 10vw)',
     fontWeight: 800,
     color: theme.palette.common.white,
   },
@@ -80,7 +80,7 @@ export const LandingStyled = styled('div')(({ theme }) => ({
   },
   [theme.breakpoints.down('md')]: {
     '.main-content': {
-      width: '100%',
+      width: 'calc(100% - 48px)',
     }
   },
   [theme.breakpoints.down('sm')]: {
@@ -88,6 +88,7 @@ export const LandingStyled = styled('div')(({ theme }) => ({
     backgroundPositionY: 'calc(100vh - 250px)',
     backgroundSize: 'calc(100vw - 20px)',
     '.main-content': {
+      width: 'calc(100% - 32px)',
       padding: '100px 16px 0 16px',
     },
   }
