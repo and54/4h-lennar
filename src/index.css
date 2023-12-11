@@ -1,13 +1,24 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --lennar-black: #000000;
+  --lennar-gray-300: #D1D5DB;
+  --lennar-gray-400: #9CA3AF;
+  --lennar-gray-500: #6B7280;
+  --lennar-gray-600: #4B5563;
+  --lennar-gray-700: #374151;
+  --lennar-gray-900: #111827;
+  --lennar-indigo-400: #818CF8;
+  --lennar-indigo-500: #6366F1;
+  --lennar-white: #FFFFFF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Inter';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--lennar-gray-300);
+  background-color: var(--lennar-gray-900);
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
