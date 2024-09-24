@@ -1,6 +1,5 @@
 import { styled } from '@mui/material';
 import { ComponentProps, PropsWithChildren } from 'react';
-import { BgImg } from '../assets';
 
 interface IStyledMenu extends PropsWithChildren<ComponentProps<'div'>> {
   open: boolean;
